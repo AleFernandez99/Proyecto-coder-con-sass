@@ -1,0 +1,66 @@
+/*
+==================================================================
+======================PÁGINAS DE CATEGORÍAS=======================
+==================================================================
+*/
+
+/*----Selector de Layout----*/
+
+.selector-cartas{
+	padding: 3px;
+	background-color: purple;
+	border-top: 2px solid black;
+
+	.cartas-btn {
+		background-color: transparent;
+		outline: none;
+		border: none;
+		padding: 6px 7px 3px 7px;
+		border-radius: 5%;
+	}
+
+	.filtros-btn {
+		display: none;
+	}
+		.cartas-btn:focus,
+		.filtros-btn:focus {
+			background-color: blanchedalmond;
+		}
+
+		.cartas-btn:focus .cartas-i, 
+		.filtros-btn:focus .cartas-i {
+			color: #160C2E;	
+		}
+}
+
+
+
+
+
+
+/*---------Cartas---------*/
+
+.card {
+	background-color: #eec0c6;
+	background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+
+	.card-text {
+		max-height: 150px;
+	}
+
+	.card-h-text-container::-webkit-scrollbar-thumb {
+		background: #7ee8fa;
+	 }
+
+	.card-h-text-container::-webkit-scrollbar-track {
+		box-shadow: inset 0 0 2px #160C2E;
+		border-radius: 5px;
+		border: none;
+	} 
+
+}
+
+
+.cartas-verticales {
+	display: none;
+}

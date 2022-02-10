@@ -1,0 +1,143 @@
+/*
+==================================================================
+=========================PÁGINA DE INICIO=========================
+==================================================================
+*/
+
+
+/*----------------------SLIDER----------------------*/
+.slider {
+	width: 100%;
+	overflow: hidden;
+}
+
+.slider ul {
+	padding: 0;
+	display:  flex;
+	width: 500%;
+	animation: cambio 30s infinite;
+	animation-direction: alternate;
+}
+
+.slider li {
+	list-style: none;
+	width: 100%;
+}
+
+.slider img {
+	width: 100%;
+}
+
+@keyframes cambio {
+	0% { margin-left: 0; }
+	20% { margin-left: 0; }
+
+	25% { margin-left: -100%; }
+	40% { margin-left: -100%; }
+
+	45% { margin-left: -200%; }
+	60% { margin-left: -200%; }
+
+	65% { margin-left: -300%; }
+	80% { margin-left: -300%; }
+
+	85% { margin-left: -400%; }
+	100% { margin-left: -400%; }
+}
+
+/*--------------------CATEGORÍAS--------------------*/
+
+.categorias{
+	width: 100%;
+	max-height: 2000px;
+	margin-top: 1vh;
+}
+
+
+.categorias-container {
+	display: grid;
+	grid-template-areas: 
+	". title       title       title       title       ."
+	". tablet      tablet      smartwatch  buds        ."
+	". tablet 	   tablet 	   tv  	  	   tv          ."
+	". smartphones smartphones smartphones smartphones ."
+	". smartphones smartphones smartphones smartphones .";
+	grid-template-rows: 10vh repeat(4, 1fr);
+	grid-template-columns: 10% repeat(4, 1fr) 10%;
+	grid-column-gap: 2px;
+	grid-row-gap: 2px;
+	margin-bottom: 2vh;
+}
+
+.categorias__title {
+	grid-area: title;
+	display: flex;
+	justify-content: center;
+}
+
+.categorias__title div {
+	display: flex;
+	background-color: #b3cdd1;
+	background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+	opacity: 0.8;
+	position: absolute;
+	text-align: center;
+	height: 10vh;
+	width: calc(80% - 4px);
+}
+
+.categorias__title div h2 {
+	font-size: 4rem;
+	font-weight: 700;
+	opacity: 20;
+	color: #160C2E;
+	margin: auto;
+}
+
+.categorias__title img {
+	object-fit: cover;
+}
+
+.tablet {
+	grid-area: tablet;
+}
+
+.smartwatch{
+	grid-area: smartwatch;
+}
+
+.buds{
+	grid-area: buds;
+}
+
+.tv{
+	grid-area: tv;
+}
+
+.smartphones{
+	grid-area: smartphones;
+	background-color: transparent;
+	height: 1px;
+}
+
+.categorias img, .smartphones video{
+	width: 100%;
+	height: 100%;
+}
+
+.categorias__elemento:hover {
+	transform: scale(1.02);
+	background-color: #7f5a83;
+	background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+	border-radius: 10px;
+}
+
+.categorias__elemento img:hover {
+	opacity: 0.3;
+	border-radius: 10px;
+}
+
+.categorias__elemento video:hover {
+	opacity: 0.5;
+	border-radius: 10px;
+}

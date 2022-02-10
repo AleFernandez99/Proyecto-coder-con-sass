@@ -1,0 +1,267 @@
+/*
+==================================================================
+============================= MOBILE =============================
+==================================================================
+*/
+
+
+@media (max-width: 1400px) {
+
+	* {font-size: 15px;}
+
+	/*Págs de Categorías----------------*/
+
+	.card-h-text-container{
+		overflow: auto;
+	}
+
+	.Espacio-vacio {
+		display: none;
+	}
+}
+
+@media (max-width: 1300px) {
+
+	* {font-size: 14px;}
+}
+
+
+@media (max-width: 1120px) {
+
+	/*Footer----------------------------*/
+	.ul-desktop {
+		display: none;
+	}
+
+	.ul-mobile {
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+
+}
+
+@media (max-width: 1060px) {
+
+	/*Págs de Categorías----------------*/
+	.cartas-horizontales {
+		display: none;
+	}
+
+	.cartas-verticales {
+		display: flex;
+	}
+
+}
+
+@media (max-width: 1024px) {
+
+	* {
+		font-size: 13px;
+	}
+
+	.div-buscador, .menu .desktop {
+		display: none;
+	}
+
+	.menu .mobile {
+		display: block;
+		position: fixed;
+	}
+
+	header {
+		height: 68px;
+	}
+
+	main {
+	padding-top: 68px;
+	}
+
+	.div-logo {
+		position: static;
+		display: inline-block;
+	}
+
+	.div-logo__img{
+		display: none;
+	}
+
+	.div-logo__img-2{
+		display: inline-block;
+	}
+
+	.menu .elemento {
+		display: inline-block;
+		float: none;
+		position: fixed;
+		top: 0px;
+		margin: 10px;
+	}
+
+	.menu .elemento i{
+		font-size: 25px;
+	}
+
+	.menu .cuenta {
+		right: 0;
+		top: 10px;
+		margin: 0;
+	}
+
+	.menu .barras {
+		left: 0px;
+		top: 10px;
+		margin: 0;
+		padding: 0;
+		border: none;
+		background-color: transparent;
+	}
+
+
+	/*Aside----------------------------*/
+
+	.aside-mobile:target {
+	visibility: visible;
+	}
+
+
+	/*CONTENIDO PAG DE INICIO--------*/
+
+	.categorias-container {
+		max-height: 200vh;
+		grid-template-areas: 
+		". title       title       ."
+		". tablet      tablet      ."
+		". tablet 	   tablet      ."
+		". smartwatch  buds        ."
+		". tv  		   tv          ."
+		". smartphones smartphones ."
+		". smartphones smartphones .";
+		grid-template-rows: 10vh repeat(6, 1fr);
+		grid-template-columns: 10% repeat(2, 1fr) 10%;
+		grid-column-gap: 2px;
+		grid-row-gap: 2px;
+	}
+
+	.categorias__title div h2 {
+	
+	}
+
+
+	/*FORMULARIO DE CONTACTO--------*/
+	.contact-form__input,
+	.term-cond-form__input {
+	padding: 6px;
+	font-size: 1.2em;
+	}
+}
+
+
+@media (max-width: 768px) {
+	/*Págs de Categorías----------------*/
+	.cartas-btn{
+		display: none;
+	}
+
+	.filtros-btn {
+		display: inline-block;
+	}
+}
+
+
+@media (max-width: 480px) {
+	.categorias-container {
+	grid-template-rows: 8vh repeat(6, 1fr);
+	grid-template-columns: 2% repeat(2, 1fr) 2%;
+	}
+
+	.categorias__title div {
+	height: 8vh;
+	width: calc(96% - 4px);
+ 	}
+
+	.categorias__title div h2 {
+	font-size: 2.7rem;
+	}
+
+	/*FORMULARIO DE CONTACTO--------*/
+
+	.contact-form {
+		height: 90vh;
+		grid-template-areas: 
+		"envelope"
+		"name"
+		"last-name"
+		"mail"
+		"phone"
+		"message"
+		"submit";
+		grid-template-columns: 100%;
+		grid-template-rows: 17vh repeat(4, 8vh) 15vh 8vh;
+		align-items: center;
+		justify-items: center;
+	}
+
+	.contact-form_envelope i{
+	font-size: 14vw;
+	}
+
+	.contact-form__name,
+	.contact-form__last-name,
+	.contact-form__mail,
+	.contact-form__phone,
+	.contact-form__message {
+	width: 90%;
+	margin-left: -3%;
+	}
+
+	.contact-exit {
+	right: 4%;
+	}
+
+}
+
+
+
+@media (max-width: 450px) {
+
+	/*Footer----------------------------*/
+	.ul-mobile {
+		margin-bottom: 80px;
+	}	
+
+}
+
+@media (max-width: 350px) {
+
+	* {font-size: 11px;}
+
+	/*Footer----------------------------*/
+	.footer__li--terminos-mobile, 
+	.footer__li--contacto-mobile, 
+	.footer__li--redes-sociales-mobile {
+		width: 90%;
+	}
+
+	/*CONTENIDO PAG DE INICIO--------*/
+	.categorias__title div h2 {
+	font-size: 3.5rem;
+	}
+
+	/*FORMULARIO DE CONTACTO--------*/
+	.contact-form_envelope i{
+	font-size: 20vw;
+	}
+}
+
+@media (max-width: 250px) {
+
+	/*CONTENIDO PAG DE INICIO--------*/
+	.categorias__title div h2 {
+	font-size: 3rem;
+	}
+
+	/*FORMULARIO DE CONTACTO--------*/
+	.contact-form_envelope i{
+	font-size: 30vw;
+	}
+}
