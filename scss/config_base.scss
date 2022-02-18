@@ -6,12 +6,21 @@
 ==================================================================
 */
 
+@mixin mar-pad{
+	margin: 0;
+	padding: 0;
+}
+
+
 * {
 	font-family: arial;
 	font-weight: 400;
 	font-size:16px;
+	/*
 	margin: 0;
 	padding: 0;
+	*/
+	@include mar-pad
 	color: blanchedalmond;
 	text-decoration: none;
 }
@@ -148,8 +157,11 @@ ul {
 .menu ul {
 	display: inline-block;
 	list-style: none;
+	/*
 	margin: 0;
 	padding: 0;
+	*/
+	@include mar-pad
 }
 
 .menu .elemento {
@@ -244,8 +256,11 @@ footer li {
 footer ul {
 	display: inline-block;
 	list-style: none;
+	/*
 	margin: 0;
 	padding: 0;
+	*/
+	@include mar-pad
 }
 
 .footer__li--terminos {
@@ -402,8 +417,7 @@ footer li i {
 */
 
 
-.contact-page_blur, 
-.term-cond-page_blur {
+.contact-page_blur {
 	width: 150vw;
 	height: 150vh;
 	background-color: #111;
@@ -412,7 +426,7 @@ footer li i {
 }
 
 .contact-page, 
-.term-cond-page {
+{
 	display: grid;
 	position: fixed;
 	top: 0;
@@ -514,6 +528,11 @@ footer li i {
 	color: black;
 	}
 
+
+
+
+
+/*---REEMPLAZADO POR MAP E EACH
 .contact-form__name {
 	grid-area: name;
 	width: 70%;
@@ -545,6 +564,47 @@ footer li i {
 	width: 20%;
 	color: #8B00BC;
 }
+
+----------------------*/
+
+$nombres-contact-form: (
+	name: name,
+	last-name: last-name,
+	mail: mail,
+	phone: phone,
+	message: message,
+	submit: submit
+);
+
+$estilos-contact-form: (
+	70: 70%,
+	20: 20%,
+	col: #8B00BC
+);
+
+@each $area, $name in $nombres-contact-form {
+	@if $area != submit {
+			.contact-form__#{$area} {
+			grid-area: $name;
+			width: map-get($estilos-contact-form, 70);
+		}
+	} @else {
+			.contact-form__#{$area} {
+			grid-area: $name;
+			width: map-get($estilos-contact-form, 20);
+			color: map-get($estilos-contact-form, col);
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
 
 .contact-form__input {
 	width: 100%;
@@ -608,8 +668,38 @@ footer li i {
 ==================================================================
 */
 
+.term-cond-page_blur {
+	@extend .contact-page_blur;
+}
+
+.term-cond-page {
+	@extend .contact-page;
+	grid-template-areas: 
+	". .                 ."
+	". term-cond-container ."
+	". .                 .";
+}
+
+.term-cond-page:target {
+	@extend .contact-page:target;
+}
+
+.term-cond-container  {
+	@extend .contact-container;
+	grid-area: term-cond-container;
+	grid-template-areas: 
+ ". .            . exit"
+ ". term-cond-form . ."
+ ". .            . .";
+}
+
+.term-cond-exit {
+	@extend .contact-exit
+}
+
+
 .term-cond-form {
-	grid-area: contact-form;
+	grid-area: term-cond-form;
 	height: 70vh;
 	overflow: auto;
 	padding: 0 1vw 0 1vw;

@@ -8,6 +8,10 @@
   font-family: arial;
   font-weight: 400;
   font-size: 16px;
+  /*
+	margin: 0;
+	padding: 0;
+	*/
   margin: 0;
   padding: 0;
   color: blanchedalmond;
@@ -120,6 +124,10 @@ ul {
 .menu ul {
   display: inline-block;
   list-style: none;
+  /*
+	margin: 0;
+	padding: 0;
+	*/
   margin: 0;
   padding: 0; }
 
@@ -196,6 +204,10 @@ footer li {
 footer ul {
   display: inline-block;
   list-style: none;
+  /*
+	margin: 0;
+	padding: 0;
+	*/
   margin: 0;
   padding: 0; }
 
@@ -325,16 +337,14 @@ footer li i {
 ======================FORMULARIO DE CONTACTO======================
 ==================================================================
 */
-.contact-page_blur,
-.term-cond-page_blur {
+.contact-page_blur, .term-cond-page_blur {
   width: 150vw;
   height: 150vh;
   background-color: #111;
   opacity: 0.6;
   filter: blur(2px); }
 
-.contact-page,
-.term-cond-page {
+.contact-page, .term-cond-page {
   display: grid;
   position: fixed;
   top: 0;
@@ -348,12 +358,12 @@ footer li i {
   visibility: hidden;
   transition: all 0.4s; }
 
-.contact-page:target,
+.contact-page:target, .term-cond-page:target,
 .term-cond-page:target {
   visibility: visible;
   opacity: 1; }
 
-.contact-container,
+.contact-container, .term-cond-container,
 .term-cond-container {
   grid-area: contact-container;
   display: grid;
@@ -365,7 +375,7 @@ footer li i {
   grid-template-rows: 5vh 90vh 5vh;
   grid-template-columns: 5% 90% 5%; }
 
-.contact-exit,
+.contact-exit, .term-cond-exit,
 .term-cond-exit {
   grid-area: exit;
   position: absolute;
@@ -378,7 +388,7 @@ footer li i {
   border-radius: 50%;
   padding: 3px 7px 2px 7px; }
 
-.contact-exit i,
+.contact-exit i, .term-cond-exit i,
 .term-cond-exit i {
   color: white;
   font-size: 15px; }
@@ -405,6 +415,40 @@ footer li i {
   font-size: 22vw;
   color: black; }
 
+/*---REEMPLAZADO POR MAP E EACH
+.contact-form__name {
+	grid-area: name;
+	width: 70%;
+}
+
+.contact-form__last-name {
+	grid-area: last-name;
+	width: 70%;
+
+}
+
+.contact-form__mail {
+	grid-area: mail;
+	width: 70%;
+}
+
+.contact-form__phone {
+	grid-area: phone;
+	width: 70%;
+}
+
+.contact-form__message {
+	grid-area: message;
+	width: 70%;
+}
+
+.contact-form__submit {
+	grid-area: submit;
+	width: 20%;
+	color: #8B00BC;
+}
+
+----------------------*/
 .contact-form__name {
   grid-area: name;
   width: 70%; }
@@ -474,8 +518,15 @@ footer li i {
 ======================TERMINOS Y CONDICIONES======================
 ==================================================================
 */
+.term-cond-page {
+  grid-template-areas: ". .                 ." ". term-cond-container ." ". .                 ."; }
+
+.term-cond-container {
+  grid-area: term-cond-container;
+  grid-template-areas: ". .            . exit" ". term-cond-form . ." ". .            . ."; }
+
 .term-cond-form {
-  grid-area: contact-form;
+  grid-area: term-cond-form;
   height: 70vh;
   overflow: auto;
   padding: 0 1vw 0 1vw; }
@@ -767,7 +818,7 @@ footer li i {
   .contact-form__message {
     width: 90%;
     margin-left: -3%; }
-  .contact-exit {
+  .contact-exit, .term-cond-exit {
     right: 4%; } }
 
 @media (max-width: 450px) {
