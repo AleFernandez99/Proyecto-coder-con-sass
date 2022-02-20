@@ -1,1 +1,82 @@
-/*AYUDA CONT*/
+/*
+==================================================================
+===========================PÁGINA AYUDA===========================
+==================================================================
+*/
+
+.ayuda {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: 6vh 0 10vh 0;
+	width: 100%;
+	padding: 0 10% 0 10%;
+}
+
+/*-------Buscador---------*/
+
+.ayuda-buscador {
+	width: 100%;
+	margin-bottom: 6vh;
+}
+
+.ayuda-buscador div{
+	display: flex;
+	justify-content: space-between;
+}
+
+.ayuda-buscador__input {
+	height: 3rem;
+	width: 92%;
+	border-radius: 5px;
+	border: none;
+	padding-left: 1rem;
+	background-color: blanchedalmond;
+	color: #111;
+	font-size: 1.2rem;
+}
+
+.ayuda-buscador__button {
+	height: 3rem;
+	width: 7%;
+	border-radius: 5px;
+	background-color: #a4508b;
+	background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+	color: blanchedalmond;
+	border: none;
+	font-size: 1.2rem;
+	font-weight: 500;
+}
+
+.ayuda-buscador__button:active {
+	background-color: blanchedalmond;
+	color: #111;
+}
+
+/*-------Aordiones---------*/
+
+
+.accordion {
+	margin-bottom: 6vh;
+	width: 100%;
+}
+
+
+.accordion-button {
+	background-color: #eec0c6;
+	background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+	border:  none;
+	font-size: 1.3rem;
+	font-weight: 600;
+
+}
+
+.accordion-body,
+.accordion-button,
+strong {
+	color: #111;
+}
+
+.accordion-collapse {
+	background-color: blanchedalmond;
+}

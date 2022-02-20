@@ -124,10 +124,6 @@ ul {
 .menu ul {
   display: inline-block;
   list-style: none;
-  /*
-	margin: 0;
-	padding: 0;
-	*/
   margin: 0;
   padding: 0; }
 
@@ -204,10 +200,6 @@ footer li {
 footer ul {
   display: inline-block;
   list-style: none;
-  /*
-	margin: 0;
-	padding: 0;
-	*/
   margin: 0;
   padding: 0; }
 
@@ -334,6 +326,127 @@ footer li i {
 
 /*
 ==================================================================
+=========================PÁGINA DE INICIO=========================
+==================================================================
+*/
+/*----------------------SLIDER----------------------*/
+.slider {
+  width: 100%;
+  overflow: hidden; }
+
+.slider ul {
+  padding: 0;
+  display: flex;
+  width: 500%;
+  animation: cambio 30s infinite;
+  animation-direction: alternate; }
+
+.slider li {
+  list-style: none;
+  width: 100%; }
+
+.slider img {
+  width: 100%; }
+
+@keyframes cambio {
+  0% {
+    margin-left: 0; }
+  20% {
+    margin-left: 0; }
+  25% {
+    margin-left: -100%; }
+  40% {
+    margin-left: -100%; }
+  45% {
+    margin-left: -200%; }
+  60% {
+    margin-left: -200%; }
+  65% {
+    margin-left: -300%; }
+  80% {
+    margin-left: -300%; }
+  85% {
+    margin-left: -400%; }
+  100% {
+    margin-left: -400%; } }
+
+/*--------------------CATEGORÍAS--------------------*/
+.categorias {
+  width: 100%;
+  max-height: 2000px;
+  margin-top: 1vh; }
+
+.categorias-container {
+  display: grid;
+  grid-template-areas: ". title       title       title       title       ." ". tablet      tablet      smartwatch  buds        ." ". tablet 	   tablet 	   tv  	  	   tv          ." ". smartphones smartphones smartphones smartphones ." ". smartphones smartphones smartphones smartphones .";
+  grid-template-rows: 10vh repeat(4, 1fr);
+  grid-template-columns: 10% repeat(4, 1fr) 10%;
+  grid-column-gap: 2px;
+  grid-row-gap: 2px;
+  margin-bottom: 2vh; }
+
+.categorias__title {
+  grid-area: title;
+  display: flex;
+  justify-content: center; }
+
+.categorias__title div {
+  display: flex;
+  background-color: #b3cdd1;
+  background-image: linear-gradient(315deg, #b3cdd1 0%, #9fa4c4 74%);
+  opacity: 0.8;
+  position: absolute;
+  text-align: center;
+  height: 10vh;
+  width: calc(80% - 4px); }
+
+.categorias__title div h2 {
+  font-size: 4rem;
+  font-weight: 700;
+  opacity: 20;
+  color: #160C2E;
+  margin: auto; }
+
+.categorias__title img {
+  object-fit: cover; }
+
+.tablet {
+  grid-area: tablet; }
+
+.smartwatch {
+  grid-area: smartwatch; }
+
+.buds {
+  grid-area: buds; }
+
+.tv {
+  grid-area: tv; }
+
+.smartphones {
+  grid-area: smartphones;
+  background-color: transparent;
+  height: 1px; }
+
+.categorias img, .smartphones video {
+  width: 100%;
+  height: 100%; }
+
+.categorias__elemento:hover {
+  transform: scale(1.02);
+  background-color: #7f5a83;
+  background-image: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+  border-radius: 10px; }
+
+.categorias__elemento img:hover {
+  opacity: 0.3;
+  border-radius: 10px; }
+
+.categorias__elemento video:hover {
+  opacity: 0.5;
+  border-radius: 10px; }
+
+/*
+==================================================================
 ======================FORMULARIO DE CONTACTO======================
 ==================================================================
 */
@@ -358,13 +471,11 @@ footer li i {
   visibility: hidden;
   transition: all 0.4s; }
 
-.contact-page:target, .term-cond-page:target,
-.term-cond-page:target {
+.contact-page:target, .term-cond-page:target {
   visibility: visible;
   opacity: 1; }
 
-.contact-container, .term-cond-container,
-.term-cond-container {
+.contact-container, .term-cond-container {
   grid-area: contact-container;
   display: grid;
   background-color: #222;
@@ -375,8 +486,7 @@ footer li i {
   grid-template-rows: 5vh 90vh 5vh;
   grid-template-columns: 5% 90% 5%; }
 
-.contact-exit, .term-cond-exit,
-.term-cond-exit {
+.contact-exit, .term-cond-exit {
   grid-area: exit;
   position: absolute;
   right: 7%;
@@ -386,10 +496,9 @@ footer li i {
   text-align: center;
   border: none;
   border-radius: 50%;
-  padding: 3px 7px 2px 7px; }
+  padding: 2px 10px 2px 10px; }
 
-.contact-exit i, .term-cond-exit i,
-.term-cond-exit i {
+.contact-exit i, .term-cond-exit i {
   color: white;
   font-size: 15px; }
 
@@ -415,40 +524,6 @@ footer li i {
   font-size: 22vw;
   color: black; }
 
-/*---REEMPLAZADO POR MAP E EACH
-.contact-form__name {
-	grid-area: name;
-	width: 70%;
-}
-
-.contact-form__last-name {
-	grid-area: last-name;
-	width: 70%;
-
-}
-
-.contact-form__mail {
-	grid-area: mail;
-	width: 70%;
-}
-
-.contact-form__phone {
-	grid-area: phone;
-	width: 70%;
-}
-
-.contact-form__message {
-	grid-area: message;
-	width: 70%;
-}
-
-.contact-form__submit {
-	grid-area: submit;
-	width: 20%;
-	color: #8B00BC;
-}
-
-----------------------*/
 .contact-form__name {
   grid-area: name;
   width: 70%; }
@@ -518,15 +593,8 @@ footer li i {
 ======================TERMINOS Y CONDICIONES======================
 ==================================================================
 */
-.term-cond-page {
-  grid-template-areas: ". .                 ." ". term-cond-container ." ". .                 ."; }
-
-.term-cond-container {
-  grid-area: term-cond-container;
-  grid-template-areas: ". .            . exit" ". term-cond-form . ." ". .            . ."; }
-
 .term-cond-form {
-  grid-area: term-cond-form;
+  grid-area: contact-form;
   height: 70vh;
   overflow: auto;
   padding: 0 1vw 0 1vw; }
@@ -696,7 +764,225 @@ footer li i {
 .cartas-verticales {
   display: none; }
 
-/*AYUDA CONT*/
+/*-------Page navigation---------*/
+.page-link {
+  background-color: #6c1c8c;
+  border-color: #160C2E; }
+
+.page-link,
+.page-item-chevron {
+  color: blanchedalmond;
+  font-weight: 700; }
+
+/*
+==================================================================
+=========================PÁGINA NOSOTROS==========================
+==================================================================
+*/
+/*.historia-container {
+	display: grid;
+	grid-template-areas: 
+	". title       title       title       title       ."
+	". tablet      tablet      smartwatch  buds        ."
+	". tablet 	   tablet 	   tv  	  	   tv          ."
+	". smartphones smartphones smartphones smartphones ."
+	". smartphones smartphones smartphones smartphones .";
+	grid-template-rows: 10vh repeat(4, 1fr);
+	grid-template-columns: 10% repeat(4, 1fr) 10%;
+	grid-column-gap: 2px;
+	grid-row-gap: 2px;
+	margin-bottom: 2vh;
+}
+
+
+
+.historia-container img{
+	width: 100%;
+	height: 100%;
+}
+
+*/
+/*
+==================================================================
+===========================PÁGINA AYUDA===========================
+==================================================================
+*/
+.ayuda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 6vh 0 10vh 0;
+  width: 100%;
+  padding: 0 10% 0 10%; }
+
+/*-------Buscador---------*/
+.ayuda-buscador {
+  width: 100%;
+  margin-bottom: 6vh; }
+
+.ayuda-buscador div {
+  display: flex;
+  justify-content: space-between; }
+
+.ayuda-buscador__input {
+  height: 3rem;
+  width: 92%;
+  border-radius: 5px;
+  border: none;
+  padding-left: 1rem;
+  background-color: blanchedalmond;
+  color: #111;
+  font-size: 1.2rem; }
+
+.ayuda-buscador__button {
+  height: 3rem;
+  width: 7%;
+  border-radius: 5px;
+  background-color: #a4508b;
+  background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+  color: blanchedalmond;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 500; }
+
+.ayuda-buscador__button:active {
+  background-color: blanchedalmond;
+  color: #111; }
+
+/*-------Aordiones---------*/
+.accordion {
+  margin-bottom: 6vh;
+  width: 100%; }
+
+.accordion-button {
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+  border: none;
+  font-size: 1.3rem;
+  font-weight: 600; }
+
+.accordion-body,
+.accordion-button,
+strong {
+  color: #111; }
+
+.accordion-collapse {
+  background-color: blanchedalmond; }
+
+/*
+==================================================================
+==========================PÁGINA CARRITO==========================
+==================================================================
+*/
+/*-------Carrito---------*/
+.card-carrito {
+  margin: 6vh 10vw 2vh 10vw;
+  border-radius: 5px;
+  padding: 4px;
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%); }
+
+.card-carrito__container {
+  background-color: #333;
+  border-radius: 5px; }
+
+.card-carrito__producto {
+  padding: 1rem;
+  display: flex; }
+
+.card-carrito__producto--img {
+  flex-grow: 1;
+  max-width: 150px;
+  padding: 1rem;
+  display: flex;
+  align-content: center;
+  justify-content: center; }
+
+.card-carrito__producto--img img {
+  width: auto;
+  max-width: 150px; }
+
+/*-------Carrito-info---------*/
+.card-carrito__producto--info {
+  flex-grow: 4;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0 0 1rem; }
+
+.envio {
+  color: #00a650; }
+
+.opciones-carrito__eliminar {
+  padding-left: 0; }
+
+.opciones-carrito .nav-link,
+.card-carrito__producto--info h5 {
+  color: white; }
+
+/*-------Carrito-cantidad---------*/
+.card-carrito__producto--cantidad {
+  display: flex;
+  flex-grow: 1;
+  align-items: center; }
+
+.cantidad-productos-input {
+  max-width: 4rem;
+  text-align: center; }
+
+.cantidad-productos-contaier {
+  margin-top: 1rem; }
+
+/*-------Carrito-precio---------*/
+.card-carrito__producto--precio {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1; }
+
+.precio-carrito-container {
+  display: flex; }
+
+.precio-carrito {
+  color: white;
+  background-color: transparent;
+  border: none;
+  font-size: 1.4rem;
+  text-align: center;
+  max-width: 8rem; }
+
+/*-------Carrito-btn-compra---------*/
+.btn-compra {
+  background-color: #eec0c6;
+  background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+  border: none;
+  font-weight: 600;
+  margin: 1rem; }
+
+/*-------Productos que te interesaron---------*/
+.otros-productos {
+  margin: 6vh 0 10vh 0;
+  padding: 0 2% 0 2%; }
+
+.carousel-item .card {
+  margin: 1vh 1%; }
+
+.carousel-item .card-container {
+  padding: 0 7vw; }
+
+.otros-productos h2 {
+  padding-left: calc(8vw - 3px); }
+
+.carousel-control-prev {
+  margin-left: -2rem; }
+
+.carousel-control-next {
+  margin-right: -2rem; }
+
+.tablet-display,
+.h-tablet-display,
+.v-tablet-display,
+.phone-display {
+  display: none; }
+
 /*
 ==================================================================
 ============================= MOBILE =============================
@@ -709,7 +995,10 @@ footer li i {
   .card-h-text-container {
     overflow: auto; }
   .Espacio-vacio {
-    display: none; } }
+    display: none; }
+  /*Pág de Ayuda----------------*/
+  .ayuda {
+    padding: 0 5% 0 5%; } }
 
 @media (max-width: 1300px) {
   * {
@@ -721,7 +1010,12 @@ footer li i {
     display: none; }
   .ul-mobile {
     display: inline-block;
-    margin-bottom: 10px; } }
+    margin-bottom: 10px; }
+  /*Pág de Ayuda----------------*/
+  .ayuda-buscador__input {
+    width: 89%; }
+  .ayuda-buscador__button {
+    width: 10%; } }
 
 @media (max-width: 1060px) {
   /*Págs de Categorías----------------*/
@@ -783,14 +1077,53 @@ footer li i {
   .contact-form__input,
   .term-cond-form__input {
     padding: 6px;
-    font-size: 1.2em; } }
+    font-size: 1.2em; }
+  /*Pág de Carrito----------------*/
+  .card-carrito {
+    margin: 6vh 2vw 2vh 2vw; }
+  .otros-productos {
+    padding: 0; }
+  .carousel-item .card-container {
+    padding: 0 6vw; }
+  .otros-productos h2 {
+    padding-left: calc(7vw - 3px); }
+  .h-tablet-none {
+    display: none; }
+  .h-tablet-display {
+    display: flex; } }
 
 @media (max-width: 768px) {
   /*Págs de Categorías----------------*/
   .cartas-btn {
     display: none; }
   .filtros-btn {
-    display: inline-block; } }
+    display: inline-block; }
+  /*Pág de Ayuda----------------*/
+  .ayuda-buscador__input {
+    width: 87%; }
+  .ayuda-buscador__button {
+    width: 12%; }
+  /*Pág de Carrito----------------*/
+  .v-tablet-none {
+    display: none; }
+  .v-tablet-display {
+    display: flex; }
+  .v-tablet-hide {
+    opacity: 0; } }
+
+@media (max-width: 600px) {
+  /*Pág de Ayuda----------------*/
+  .ayuda-buscador__input {
+    width: 85%; }
+  .ayuda-buscador__button {
+    width: 14%; }
+  /*Pág de Carrito----------------*/
+  .phone-none {
+    display: none; }
+  .phone-display {
+    display: flex; }
+  .v-tablet-hide {
+    opacity: 1; } }
 
 @media (max-width: 480px) {
   .categorias-container {
@@ -819,7 +1152,21 @@ footer li i {
     width: 90%;
     margin-left: -3%; }
   .contact-exit, .term-cond-exit {
-    right: 4%; } }
+    right: 4%; }
+  /*Pág de Ayuda----------------*/
+  .ayuda-buscador__input {
+    width: 81%; }
+  .ayuda-buscador__button {
+    width: 18%; }
+  /*Pág de Carrito----------------*/
+  .carousel-item .card-container {
+    padding: 0 7vw; }
+  .otros-productos h2 {
+    padding-left: calc(8vw - 3px); }
+  .carousel-control-prev {
+    margin-left: -1.5rem; }
+  .carousel-control-next {
+    margin-right: -1.5rem; } }
 
 @media (max-width: 450px) {
   /*Footer----------------------------*/
@@ -839,7 +1186,12 @@ footer li i {
     font-size: 3.5rem; }
   /*FORMULARIO DE CONTACTO--------*/
   .contact-form_envelope i {
-    font-size: 20vw; } }
+    font-size: 20vw; }
+  /*Pág de Ayuda----------------*/
+  .ayuda-buscador__input {
+    width: 76%; }
+  .ayuda-buscador__button {
+    width: 22%; } }
 
 @media (max-width: 250px) {
   /*CONTENIDO PAG DE INICIO--------*/
@@ -847,4 +1199,9 @@ footer li i {
     font-size: 3rem; }
   /*FORMULARIO DE CONTACTO--------*/
   .contact-form_envelope i {
-    font-size: 30vw; } }
+    font-size: 30vw; }
+  /*Pág de Ayuda----------------*/
+  .ayuda-buscador__input {
+    width: 72%; }
+  .ayuda-buscador__button {
+    width: 26%; } }

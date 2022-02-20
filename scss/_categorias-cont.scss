@@ -34,10 +34,6 @@
 }
 
 
-
-
-
-
 /*---------Cartas---------*/
 
 .card {
@@ -63,4 +59,18 @@
 
 .cartas-verticales {
 	display: none;
+}
+
+/*-------Page navigation---------*/
+
+
+.page-link {
+	background-color: #6c1c8c; 
+	border-color: #160C2E;
+}
+
+.page-link,
+.page-item-chevron {
+	color: blanchedalmond;
+	font-weight: 700;
 }

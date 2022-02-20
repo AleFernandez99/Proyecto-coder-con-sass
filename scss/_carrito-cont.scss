@@ -1,0 +1,151 @@
+/*
+==================================================================
+==========================PÁGINA CARRITO==========================
+==================================================================
+*/
+
+/*-------Carrito---------*/
+
+.card-carrito {
+	margin: 6vh 10vw 2vh 10vw;
+	border-radius: 5px;
+	padding: 4px;
+	background-color: #eec0c6;
+	background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+}
+
+.card-carrito__container {
+	background-color: #333;
+	border-radius: 5px;
+}
+
+.card-carrito__producto {
+	padding: 1rem;
+	display: flex;
+}
+
+
+.card-carrito__producto--img {
+	flex-grow: 1;
+	max-width: 150px;
+	padding: 1rem;
+	display: flex;
+	align-content: center;
+	justify-content: center;
+}
+
+.card-carrito__producto--img img {
+	width: auto;
+	max-width: 150px;
+}
+
+/*-------Carrito-info---------*/
+
+.card-carrito__producto--info {
+	flex-grow: 4;
+	display: flex;
+	align-items: center;
+	padding: 1rem 0 0 1rem;
+}
+
+.envio {
+	color: #00a650;
+}
+
+.opciones-carrito__eliminar {
+	padding-left: 0;
+}
+
+.opciones-carrito .nav-link,
+.card-carrito__producto--info h5 {
+	color: white;
+}
+
+
+/*-------Carrito-cantidad---------*/
+
+.card-carrito__producto--cantidad {
+	display: flex;
+	flex-grow: 1;
+	align-items: center;
+}
+
+.cantidad-productos-input {
+	max-width: 4rem;
+	text-align: center;
+}
+
+.cantidad-productos-contaier {
+	margin-top: 1rem;
+}
+
+
+/*-------Carrito-precio---------*/
+
+.card-carrito__producto--precio {
+	display: flex;
+	justify-content: center;
+	flex-grow: 1;
+}
+
+.precio-carrito-container {
+	display: flex;
+
+}
+
+.precio-carrito {
+	color: white;
+	background-color: transparent;
+	border: none;
+	font-size: 1.4rem;
+	text-align: center;
+	max-width: 8rem;
+}
+
+/*-------Carrito-btn-compra---------*/
+
+.btn-compra {
+	background-color: #eec0c6;
+	background-image: linear-gradient(315deg, #eec0c6 0%, #7ee8fa 74%);
+	border: none;
+	font-weight: 600;
+	margin: 1rem;
+}
+
+
+
+/*-------Productos que te interesaron---------*/
+
+.otros-productos {
+	margin: 6vh 0 10vh 0;
+	padding: 0 2% 0 2%;
+}
+
+.carousel-item .card {
+	margin: 1vh 1%;
+}
+
+
+.carousel-item .card-container {
+	padding: 0 7vw;
+}
+
+.otros-productos h2 {
+	padding-left: calc(8vw - 3px);
+}
+
+.carousel-control-prev {
+	margin-left: -2rem;
+}
+
+.carousel-control-next {
+	margin-right: -2rem;
+}
+
+.tablet-display,
+.h-tablet-display,
+.v-tablet-display,
+.phone-display {
+	display: none;
+}
+

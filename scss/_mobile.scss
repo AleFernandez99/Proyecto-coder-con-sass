@@ -4,7 +4,6 @@
 ==================================================================
 */
 
-
 @media (max-width: 1400px) {
 
 	* {font-size: 15px;}
@@ -17,6 +16,12 @@
 
 	.Espacio-vacio {
 		display: none;
+	}
+
+	/*Pág de Ayuda----------------*/
+
+	.ayuda {
+		padding: 0 5% 0 5%;
 	}
 }
 
@@ -38,6 +43,14 @@
 		margin-bottom: 10px;
 	}
 
+	/*Pág de Ayuda----------------*/
+	.ayuda-buscador__input {
+		width: 89%;
+	}
+
+	.ayuda-buscador__button {
+		width: 10%;
+	}
 }
 
 @media (max-width: 1060px) {
@@ -150,8 +163,33 @@
 	/*FORMULARIO DE CONTACTO--------*/
 	.contact-form__input,
 	.term-cond-form__input {
-	padding: 6px;
-	font-size: 1.2em;
+		padding: 6px;
+		font-size: 1.2em;
+	}
+
+	/*Pág de Carrito----------------*/
+	.card-carrito {
+		margin: 6vh 2vw 2vh 2vw;
+	}
+
+	.otros-productos {
+		padding: 0;
+	}
+
+	.carousel-item .card-container {
+		padding: 0 6vw;
+	}
+
+	.otros-productos h2 {
+		padding-left: calc(7vw - 3px);
+	}
+
+	.h-tablet-none {
+		display: none;
+	}
+
+	.h-tablet-display {
+		display: flex;
 	}
 }
 
@@ -164,6 +202,53 @@
 
 	.filtros-btn {
 		display: inline-block;
+	}
+
+	/*Pág de Ayuda----------------*/
+	.ayuda-buscador__input {
+		width: 87%;
+	}
+
+	.ayuda-buscador__button {
+		width: 12%;
+	}
+
+	/*Pág de Carrito----------------*/
+	.v-tablet-none {
+		display: none;
+	}
+
+	.v-tablet-display {
+		display: flex;
+	}
+
+	.v-tablet-hide {
+		opacity: 0;
+	}
+}
+
+
+@media (max-width: 600px) {
+	/*Pág de Ayuda----------------*/
+	.ayuda-buscador__input {
+		width: 85%;
+	}
+
+	.ayuda-buscador__button {
+		width: 14%;
+	}
+
+	/*Pág de Carrito----------------*/
+	.phone-none {
+		display: none;
+	}
+
+	.phone-display {
+		display: flex;
+	}
+
+	.v-tablet-hide {
+		opacity: 1;
 	}
 }
 
@@ -218,6 +303,32 @@
 	right: 4%;
 	}
 
+	/*Pág de Ayuda----------------*/
+	.ayuda-buscador__input {
+		width: 81%;
+	}
+
+	.ayuda-buscador__button {
+		width: 18%;
+	}
+
+	/*Pág de Carrito----------------*/
+	.carousel-item .card-container {
+		padding: 0 7vw;
+	}
+
+	.otros-productos h2 {
+		padding-left: calc(8vw - 3px);
+	}
+
+	.carousel-control-prev {
+		margin-left: -1.5rem;
+	}
+
+	.carousel-control-next {
+		margin-right: -1.5rem;
+	}
+
 }
 
 
@@ -251,6 +362,15 @@
 	.contact-form_envelope i{
 	font-size: 20vw;
 	}
+
+	/*Pág de Ayuda----------------*/
+	.ayuda-buscador__input {
+		width: 76%;
+	}
+
+	.ayuda-buscador__button {
+		width: 22%;
+	}
 }
 
 @media (max-width: 250px) {
@@ -263,5 +383,14 @@
 	/*FORMULARIO DE CONTACTO--------*/
 	.contact-form_envelope i{
 	font-size: 30vw;
+	}
+
+	/*Pág de Ayuda----------------*/
+	.ayuda-buscador__input {
+		width: 72%;
+	}
+
+	.ayuda-buscador__button {
+		width: 26%;
 	}
 }
