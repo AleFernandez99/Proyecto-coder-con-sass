@@ -374,11 +374,7 @@ footer li i {
 
 .categorias-container {
   display: grid;
-  grid-template-areas: ". title       title       title       title       ."
- ". tablet      tablet      smartwatch  buds        ."
- ". tablet 	   tablet 	   tv  	  	   tv          ."
- ". smartphones smartphones smartphones smartphones ."
- ". smartphones smartphones smartphones smartphones .";
+  grid-template-areas: ". title       title       title       title       ." ". tablet      tablet      smartwatch  buds        ." ". tablet 	   tablet 	   tv  	  	   tv          ." ". smartphones smartphones smartphones smartphones ." ". smartphones smartphones smartphones smartphones .";
   grid-template-rows: 10vh repeat(4, 1fr);
   grid-template-columns: 10% repeat(4, 1fr) 10%;
   grid-column-gap: 2px;
@@ -464,9 +460,7 @@ footer li i {
   height: 100vh;
   width: 100%;
   z-index: 2000;
-  grid-template-areas: ". .                 ."
- ". contact-container ."
- ". .                 .";
+  grid-template-areas: ". .                 ." ". contact-container ." ". .                 .";
   grid-template-rows: 10vh 80vh 10vh;
   grid-template-columns: 10% 80% 10%;
   opacity: 0;
@@ -482,16 +476,9 @@ footer li i {
   display: grid;
   background-color: #222;
   border-radius: 5px;
-  box-shadow: 0 0 0.1vw 0.4vw #F1B7FF,
- 0 0 0.4vw 0.6vw #C521FF,
- 0 0   4vw 0.4vw #8B00BC,
-  inset 0 0 2vw 0.4vw #8B00BC,
- inset 0 0 0.8vw 0.2vw #C521FF,
- inset 0 0 0.3vw 0.2vw #F1B7FF;
+  box-shadow: 0 0 0.1vw 0.4vw #F1B7FF, 0 0 0.4vw 0.6vw #C521FF, 0 0   4vw 0.4vw #8B00BC,  inset 0 0 2vw 0.4vw #8B00BC, inset 0 0 0.8vw 0.2vw #C521FF, inset 0 0 0.3vw 0.2vw #F1B7FF;
   z-index: 2100;
-  grid-template-areas: ". .            . exit"
- ". contact-form . ."
- ". .            . .";
+  grid-template-areas: ". .            . exit" ". contact-form . ." ". .            . .";
   grid-template-rows: 5vh 90vh 5vh;
   grid-template-columns: 5% 90% 5%; }
 
@@ -515,12 +502,7 @@ footer li i {
   grid-area: contact-form;
   display: grid;
   height: 70vh;
-  grid-template-areas: "envelope name"
- "envelope last-name"
- "envelope mail"
- "envelope phone"
- "envelope message"
- "envelope submit";
+  grid-template-areas: "envelope name" "envelope last-name" "envelope mail" "envelope phone" "envelope message" "envelope submit";
   grid-template-columns: 40% 60%;
   grid-template-rows: repeat(4, 2fr) 3fr 1fr;
   justify-items: center;
@@ -532,9 +514,7 @@ footer li i {
   border-radius: 50%;
   border: none;
   padding: 3vw;
-  box-shadow: 0 0px 0.1vw 0vw #FFFFFF,
- 0 0px 0.6vw 0vw #C7C7C7,
- 0 5px   3vw 0vw #C5C5C5; }
+  box-shadow: 0 0px 0.1vw 0vw #FFFFFF, 0 0px 0.6vw 0vw #C7C7C7, 0 5px   3vw 0vw #C5C5C5; }
 
 .contact-form_envelope i {
   font-size: 22vw;
@@ -601,13 +581,8 @@ footer li i {
 .term-cond-input-submit:active {
   font-weight: 700;
   background-color: #F1B7FF;
-  box-shadow: 0 0 0.1vw 0.4vw #F1B7FF,
- 0 0 0.4vw 0.6vw #C521FF,
- 0 0   4vw 0.4vw #8B00BC,
-  inset 0 0 0.1vw 0.2vw #F1B7FF;
-  text-shadow: 0 0px 0.1vw 0vw #FFFFFF,
- 0 0px 0.6vw 0vw #C7C7C7,
- 0 5px   3vw 0vw #C5C5C5; }
+  box-shadow: 0 0 0.1vw 0.4vw #F1B7FF, 0 0 0.4vw 0.6vw #C521FF, 0 0   4vw 0.4vw #8B00BC,  inset 0 0 0.1vw 0.2vw #F1B7FF;
+  text-shadow: 0 0px 0.1vw 0vw #FFFFFF, 0 0px 0.6vw 0vw #C7C7C7, 0 5px   3vw 0vw #C5C5C5; }
 
 /*
 ==================================================================
@@ -677,11 +652,7 @@ footer li i {
 
 .categorias-container {
   display: grid;
-  grid-template-areas: ". title       title       title       title       ."
- ". tablet      tablet      smartwatch  buds        ."
- ". tablet 	   tablet 	   tv  	  	   tv          ."
- ". smartphones smartphones smartphones smartphones ."
- ". smartphones smartphones smartphones smartphones .";
+  grid-template-areas: ". title       title       title       title       ." ". tablet      tablet      smartwatch  buds        ." ". tablet 	   tablet 	   tv  	  	   tv          ." ". smartphones smartphones smartphones smartphones ." ". smartphones smartphones smartphones smartphones .";
   grid-template-rows: 10vh repeat(4, 1fr);
   grid-template-columns: 10% repeat(4, 1fr) 10%;
   grid-column-gap: 2px;
@@ -928,6 +899,9 @@ strong {
   max-width: 150px; }
 
 /*-------Carrito-info---------*/
+.carrito-mobile {
+  display: none; }
+
 .card-carrito__producto--info {
   flex-grow: 4;
   display: flex;
@@ -1093,13 +1067,7 @@ strong {
   /*CONTENIDO PAG DE INICIO--------*/
   .categorias-container {
     max-height: 200vh;
-    grid-template-areas: ". title       title       ."
- ". tablet      tablet      ."
- ". tablet 	   tablet      ."
- ". smartwatch  buds        ."
- ". tv  		   tv          ."
- ". smartphones smartphones ."
- ". smartphones smartphones .";
+    grid-template-areas: ". title       title       ." ". tablet      tablet      ." ". tablet 	   tablet      ." ". smartwatch  buds        ." ". tv  		   tv          ." ". smartphones smartphones ." ". smartphones smartphones .";
     grid-template-rows: 10vh repeat(6, 1fr);
     grid-template-columns: 10% repeat(2, 1fr) 10%;
     grid-column-gap: 2px;
@@ -1122,6 +1090,32 @@ strong {
     display: none; }
   .h-tablet-display {
     display: flex; } }
+
+@media (max-width: 780px) {
+  /*Pág de Carrito----------------*/
+  .card-carrito__producto {
+    padding: 1rem;
+    display: grid;
+    grid-template-areas: "titulo-carrito   titulo-carrito   titulo-carrito   titulo-carrito" "img-carrito      .                .                .             " "img-carrito      .                cant-carrito     precio-carrito" "img-carrito      .                .                .               " "opciones-carrito opciones-carrito opciones-carrito opciones-carrito";
+    grid-template-rows: repeat(3, 2.5rem);
+    grid-template-columns: 110px auto 42% 18%; }
+  .card-carrito__producto--titulo {
+    grid-area: titulo-carrito; }
+  .card-carrito__producto--img {
+    grid-area: img-carrito;
+    max-width: 100px; }
+  .card-carrito__producto--cantidad {
+    grid-area: cant-carrito; }
+  .card-carrito__producto--precio {
+    grid-area: precio-carrito; }
+  .card-carrito__producto--opciones {
+    grid-area: opciones-carrito; }
+  .card-carrito__producto--img img {
+    max-width: 100px; }
+  .card-carrito__producto--info {
+    display: none; }
+  .carrito-mobile {
+    display: inline-block; } }
 
 @media (max-width: 768px) {
   /*Págs de Categorías----------------*/
@@ -1168,13 +1162,7 @@ strong {
   /*FORMULARIO DE CONTACTO--------*/
   .contact-form {
     height: 90vh;
-    grid-template-areas: "envelope"
- "name"
- "last-name"
- "mail"
- "phone"
- "message"
- "submit";
+    grid-template-areas: "envelope" "name" "last-name" "mail" "phone" "message" "submit";
     grid-template-columns: 100%;
     grid-template-rows: 17vh repeat(4, 8vh) 15vh 8vh;
     align-items: center;

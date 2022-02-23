@@ -155,10 +155,6 @@
 		grid-row-gap: 2px;
 	}
 
-	.categorias__title div h2 {
-	
-	}
-
 
 	/*FORMULARIO DE CONTACTO--------*/
 	.contact-form__input,
@@ -191,6 +187,58 @@
 	.h-tablet-display {
 		display: flex;
 	}
+}
+
+@media (max-width: 780px) {
+	/*Pág de Carrito----------------*/
+
+	.card-carrito__producto {
+		padding: 1rem;
+		display: grid;
+		grid-template-areas: 
+		"titulo-carrito   titulo-carrito   titulo-carrito   titulo-carrito"
+		"img-carrito      .                .                .             "
+		"img-carrito      .                cant-carrito     precio-carrito"
+		"img-carrito      .                .                .               "
+		"opciones-carrito opciones-carrito opciones-carrito opciones-carrito";
+		grid-template-rows: repeat(3, 2.5rem);
+		grid-template-columns: 110px auto 42% 18%;
+	}
+
+
+	.card-carrito__producto--titulo {
+		grid-area: titulo-carrito;
+	}
+
+	.card-carrito__producto--img {
+		grid-area: img-carrito;
+		max-width: 100px;
+	}
+
+	.card-carrito__producto--cantidad {
+		grid-area: cant-carrito;
+	}
+
+	.card-carrito__producto--precio {
+		grid-area: precio-carrito;	
+	}
+
+	.card-carrito__producto--opciones {
+		grid-area: opciones-carrito;
+	}
+
+	.card-carrito__producto--img img {
+		max-width: 100px;
+	}
+
+	.card-carrito__producto--info {
+		display: none;
+	}
+
+	.carrito-mobile {
+		display: inline-block;
+	}
+
 }
 
 

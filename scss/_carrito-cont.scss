@@ -24,7 +24,6 @@
 	display: flex;
 }
 
-
 .card-carrito__producto--img {
 	flex-grow: 1;
 	max-width: 150px;
@@ -40,6 +39,10 @@
 }
 
 /*-------Carrito-info---------*/
+
+.carrito-mobile {
+	display: none;
+}
 
 .card-carrito__producto--info {
 	flex-grow: 4;
@@ -148,4 +151,3 @@
 .phone-display {
 	display: none;
 }
-
